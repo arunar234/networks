@@ -104,7 +104,7 @@ s=recv(csd,rcvg,100,0);
 rcvg[s]='\0';
 if(strcmp(rcvg,"error")==0)
 printf("File is not available\n");
-if(strcmp(rcvg,"completed")==0)
+if(strcmp(rcvg,"completed")==0 || s==0)
 {
 printf("File is transferred........\n");
 fclose(fp);
